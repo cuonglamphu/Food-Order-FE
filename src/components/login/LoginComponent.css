@@ -1,0 +1,102 @@
+#loginContainerId{
+    
+    /* justify-content: center;
+    align-items: center;
+    /*margin-left: 190px; */
+    /* text-align: center; */ 
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 30px;
+    border: 2px solid #dee2e6;
+    /* box-shadow: 0 0 15px 15px rgb(133, 127, 127); */
+    box-shadow: 0 0 20px 0 rgb(0,0, 0, 0.6);
+}
+
+
+.login-main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    width: 400px !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #ff3838;
+}
+
+.card-body.login{
+    padding-bottom: 0;
+}
+
+.login-submit-btn{
+    font-size: 18px;
+    padding: 6px 20px;
+    border-radius: 20px;
+    background-color: #198754;
+    border: none;
+    color: whitesmoke;
+    margin: 20px auto 12px auto;
+    display: flex;
+    box-shadow: 0 2px 6px rgb(0, 0, 0, 0.3);
+}
+
+.registration-div{
+    display: flex;
+    justify-content: center;
+}
+
+.registration-link{
+    font-size: 16px !important;
+    color: #ff3838;
+    font-weight: 500;
+}
+
+.registration-link:hover{
+    color: #d00000;
+}
+
+.login-input{
+    border-radius: 10px !important;
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.title-login{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    align-items: center;
+}
+
+.icon-log-login{
+    font-size: 30px;
+    margin-right: 10px;
+    fill: #198754;
+}
+
+@media(max-width: 800px){
+    #loginContainerId{
+        width: 80%;
+    }
+
+    .registration-div{
+        font-size: 12px;
+        letter-spacing: 0;
+       
+    }
+    .registration-label{
+        width: fit-content;
+    }
+
+    .registration-link{
+        font-size: 12px !important;
+        letter-spacing: 0;
+    }
+}

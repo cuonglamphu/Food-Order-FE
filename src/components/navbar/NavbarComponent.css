@@ -1,0 +1,333 @@
+.logo{
+    height: 60px;
+    width: 60px;
+    margin-left: 24px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.cartLink{
+    position: relative;
+    margin-left: auto;
+}
+
+.logo-cart{
+    height: 38px;
+    fill: whitesmoke;
+    transform: scaleX(-1); /* da rotira ikonicu */
+    z-index: 0;
+}
+
+.number-cart-div{
+    position: absolute;
+    top: -14px;
+    left: -12px;
+    width: 28px;
+    height: 28px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    line-height: 24px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.number-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.registrationLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(177, 255, 177);
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 2px solid rgb(177, 255, 177) ;
+    border-radius: 12px;  
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+}
+
+.registrationLink:hover{
+    color: rgb(177, 255, 177);
+    background-color: rgb(159, 0, 0);
+    transform: translateY(-2px);
+}
+
+.icon-registration-nav{
+    font-size: 20px;
+    fill: rgb(177, 255, 177);
+    margin-right: 6px;
+    transition: transform 0.3s;
+}
+
+.icon-registration-nav:hover {
+    transform: scale(1.1);
+}
+
+.myProfileLink{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    background: linear-gradient(135deg, #b95e1d 0%, #000000 100%);
+    color: white;
+    height: 100px;
+    display: flex;
+    padding: 0 4%;
+    z-index: 1000;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    align-items: center;
+}
+
+a{
+    font-size: 18px !important;
+}
+
+.navLink{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* padding-left: 26px; */
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.navLinkMenu{
+    font-size: 20px;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
+    color: white;
+    margin-left: 24px;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.navLinkMenu::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.navLinkMenu:hover::after {
+    width: 100%;
+}
+
+.navMenu{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 30px;
+    margin-right: auto;
+    justify-content: center;
+    gap: 30px;
+}
+
+.myProfileLink:hover, .navLink:hover, .navLinkMenu:hover {
+    color: #002aff !important;
+}
+    
+.navBtn{
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    margin-left: 28px;
+    justify-content: flex-end;
+    gap: 10px;
+}
+  
+.btn-login-logout{
+    border-radius: 12px;
+    padding: 12px 20px !important;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    background-color: #198754;
+    font-size: 18px !important;
+    font-weight: 500;
+    letter-spacing: 1px !important;   
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.btn-login-logout:hover{
+    color: whitesmoke;
+    background-color: #004726;
+    transform: translateY(-2px);
+}
+
+.icon-log{
+    fill: whitesmoke;
+    font-size: 20px;
+    margin-right: 8px;
+    transition: transform 0.3s;
+}
+
+.icon-log:hover {
+    transform: scale(1.1);
+}
+
+.x-icon, .bars-icon{
+    display: none;
+}
+
+.nav-links-buttons-container{
+    display: flex;
+}
+
+@media(max-width: 1300px){
+    .navMenu{
+        gap: 18px;
+    }
+}
+
+@media(max-width: 1200px){
+
+    .x-icon, .bars-icon{
+        display: block;
+        height: 36px;
+        fill: whitesmoke;
+    }
+
+    .nav-links-buttons-container{
+        position: fixed;
+        background-color: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -280px;     
+        z-index: 50;
+        transition: 1s;
+        text-align: center;
+        display: block;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .navLink{
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .navMenu{
+        display: block;
+        margin: 0;
+        
+    }
+
+    .navBtn{
+        display: block;
+        margin: 0;
+    }
+
+    .btn-login-logout{
+        width: 70%;
+        display: block;
+        margin: auto;
+        font-size: 14px !important;
+        margin-top: 12px;
+    }
+
+    .registrationLink{
+        width: 70%;
+        margin: auto;
+        font-size: 14px !important;
+    }
+
+    .myProfileLink{
+        margin: 20px 0;
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
+    .x-icon{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        
+    }
+
+    .bars-icon{
+        margin-right: 6px;
+        margin-left: 26px;
+    }
+
+    .logo{
+        margin-left: 6px;
+    }
+
+    .navLinkMenu{
+        margin-left: 16px;
+    }
+
+    .navBtn{
+        margin-top: 100px;
+    }
+
+    .navMenu{
+        margin-top: 100px;
+    }
+}
+
+
+  
+
+
+
+

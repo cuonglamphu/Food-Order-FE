@@ -1,0 +1,339 @@
+.mealPic{
+    height: 110px;
+    width: 90%;
+    object-fit: cover; /* da ne razvuce sliku */
+    border: 2px rgb(173, 135, 135) solid ; 
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.theadth{
+    text-align: center;
+    font-size: larger;
+}
+
+.td-content-img{
+    display: flex; 
+    justify-content: center;
+}
+
+.td-content{
+ font-size: larger;
+}
+
+.tableElement{
+    margin-top: 20px;
+    background-color: whitesmoke; 
+    border-radius: 30px !important;
+    border-collapse: separate !important; /*mora ovo separate zbog bootstrapa, ne savije border, jer bootstrap setuje na collapse
+    /* border: 10px solid rgb(241, 0, 0) !important da pregazi bootstrapov border */
+    box-shadow: 0 0 15px 15px rgb(133, 127, 127);
+}
+
+.td-content.desc{
+    max-width: 300px;
+}
+
+
+/********** cart ***********/
+
+.cart-title{
+    padding: 20px 30px;
+    background: whitesmoke;
+    width: 360px;
+    margin: auto;
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    border-radius: 20px;
+
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 0 0 16px 0 rgb(0,0, 0, 0.6);
+    text-align: center;
+}
+
+.cart-icon-svg-title{
+    margin-left: 12px;
+    fill: #198754;
+}
+
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cart-item-container{
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 0 0 16px 0 rgb(0,0, 0, 0.6);
+}
+
+
+.item-meal-pic{
+    width: 260px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgb(131, 131, 131);
+}
+
+.item-info-container{
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.item-name-container{
+    min-width: 150px;
+    max-width: 150px;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item-name-text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.item-type-text{
+    font-size: 16px;
+}
+
+.item-type{
+    min-width: 100px;
+    max-width: 130px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.item-price{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.item-quantity{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+}
+
+.item-description{
+    width: 250px;
+    color: rgb(74, 74, 74);
+    display: flex;
+    align-items: center;
+}
+
+.item-action-container{
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+    margin-left: auto;
+    gap: 10px;
+}
+
+.button-icon-container{
+    padding: 8px 18px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-icon-container.update{
+    background-color: #198754;
+}
+
+.button-icon-container.delete{
+    background-color: #dc3545;
+}
+
+.button-icon-container:hover{
+    cursor: pointer;
+}
+
+
+.btn-action{
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    border: none;
+    font-size: 16px !important;
+}
+
+.btn-action.update{
+    background-color: #198754;
+}
+
+.btn-action.delete{
+    background-color: #dc3545;
+}
+
+.btn-action:hover{
+    color: rgb(245, 245, 245);
+}
+
+.action-icon{
+    font-size: 20px;
+    margin-left: 8px;
+    fill: whitesmoke;
+}
+
+.btn-send-final-order{
+   
+        padding: 12px 26px;
+        text-decoration: none;
+        color: rgb(245, 245, 245);
+        border-radius: 20px;
+        border: none;
+        font-size: 18px !important;
+        display: flex;
+        align-items: center;
+        background-color: #198754;
+        margin: auto;
+        box-shadow: 0 0 8px 0 rgb(0,0, 0, 1);
+        margin-top: 16px;
+}
+
+.icon-send-final-order{
+    font-size: 20px;
+    fill: whitesmoke;
+    margin-left: 10px;
+}
+
+.modalCustomEdit{
+    width: 30% !important;
+}
+
+.modalCustomInsertDetails{
+    width: 30% !important;
+}
+
+.action-icon-mobile{
+    display: none;
+}
+
+.modal-footer{
+    justify-content: center !important;
+}
+
+
+@media(max-width: 1530px){
+    .item-action-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* mozda bi bilo bolje ceo card preko flex-box-a da sam radio width sa flex: 1/2/3;, mada dobro je i ovako */
+@media(max-width: 1580px){
+    .item-price{
+        max-width: 100px;
+    }
+}
+
+@media(max-width: 1400px){
+    .item-price{
+        max-width: 100px;
+    }
+    .cart-item-container{
+        width: 90%;
+    }
+
+}
+
+@media(max-width: 1180px){
+    /* samo za mobile screen size se pojavljuje */
+    .action-icon-mobile{
+        display: block;  
+    }
+
+    .action-icon-mobile.update{
+        height: 32px;
+        fill: #198754;
+        /* margin-bottom: 12px; */
+        
+    }
+    .action-icon-mobile.delete{
+        height: 32px;
+        fill: #dc3545;
+       
+    }
+    /* sakrivam za desktop */
+    .button-icon-container{
+        display: none;
+    }
+
+    .cart-item-container{
+        width: 95%;
+    }
+    .modalCustomEdit{
+        width: 80% !important;
+    }
+
+    .modalCustomInsertDetails{
+        width: 80% !important;
+    }
+
+    .item-info-container{
+        flex-direction: column;
+        width: 50%;
+        gap: 4px;
+    }
+
+    .item-meal-pic{
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-name-text{
+        font-size: 18px;
+    }
+    .item-type-text{
+        font-size: 16px;
+    }
+
+    .item-description{
+        font-size: 14px;
+        width: auto;
+    }
+
+    .item-price{
+        font-size: 16px;
+    }
+    .item-quantity{
+        font-size: 18px;
+    }
+
+    .item-action-container{
+       flex-direction: column;
+       gap: 24px;
+       margin: auto;
+    }
+
+    .cart-title{
+        width: 95%;
+    } 
+}
+
+@media(max-width: 400px){
+    .item-info-container{
+        margin-right: 0;
+    }
+}
+

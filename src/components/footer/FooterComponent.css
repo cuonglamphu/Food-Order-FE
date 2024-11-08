@@ -1,0 +1,85 @@
+.footer-container {
+    background: linear-gradient(135deg, #b95e1d 0%, #000000 100%);
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.social-icon {
+    width: 32px; /* hoặc kích thước phù hợp với thiết kế của bạn */
+    height: 32px;
+    background-image: url('../../images/1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.pixel-logo {
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-social {
+    display: flex;
+    gap: 20px;
+}
+
+.pixel-icon {
+    width: 32px;
+    height: 32px;
+    background-image: url('../../images/1.png');
+    background-size: contain;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.pixel-icon:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+}
+
+.pixel-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.pixel-copyright {
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+

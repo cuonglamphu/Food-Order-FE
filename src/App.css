@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  font-family: 'Press Start 2P', cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #000;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+button {
+  font-size: 12px !important;
+  padding: 12px 20px;
+  text-shadow: 2px 2px #000;
+}
+
+input, select, textarea {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px !important;
+  padding: 8px 12px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(255, 58, 58);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-size: 10px;
+  text-shadow: 2px 2px #000;
+}
+
+.router-view {
+  overflow-y: auto;
+  min-height: calc(73.6486vh);
+  overflow-x: hidden;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.router-view::before{
+  display: block;
+  height: 100%;
+  width: 100vw;
+  background-image: linear-gradient(rgba(255, 136, 164, 0.2), rgba(255, 136, 164, 0.2)), url('./images/backimage.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  content: "";
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.swal2-confirm.swal2-styled.swal2-default-outline{
+  background-color: #198754 !important; /* yes button na swal alertu, ne treba na ovaj nacin, ali radi okej. */
+}
+
+.swal2-title{
+  font-weight: 500 !important; /* bude po defaultu 600 izgleda sada iz nekog razloga, kao da je pre bio 500, pa sad stavljam da bude isto kao pre */
+}
+
+
+/********** SCROLL BAR START ************/
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border: 2px solid #fff;
+  -webkit-border-radius: 0; /* Bỏ border radius để có góc vuông */
+  -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+}
+
+/********** SCROLL BAR END ************/

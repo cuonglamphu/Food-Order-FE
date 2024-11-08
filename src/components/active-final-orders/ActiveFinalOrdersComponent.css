@@ -1,0 +1,59 @@
+.theadth{
+    text-align: center;
+    font-size: larger;
+}
+
+.td-content{
+ align-items: center;
+ font-size: larger;
+}
+
+.tableElement{
+    margin-top: 20px;
+    background-color: whitesmoke; 
+    border-radius: 30px !important;
+    border: 3px solid; 
+    border-collapse: separate !important; /*mora ovo separate zbog bootstrapa, ne savije border, jer bootstrap setuje na collapse
+    /* border: 10px solid rgb(241, 0, 0) !important da pregazi bootstrapov border */
+    box-shadow: 0 0 15px 15px rgb(133, 127, 127);
+}
+
+.selectStatus{
+    padding-right: 30px !important;
+    /* padding-left: 20px !important; */
+    font-size: large !important;
+    
+}
+
+
+.title-active-final-orders{
+    padding: 20px 30px;
+    background: rgb(245, 245, 245);
+    width: 400px;
+    margin: auto;
+    color: black;
+    font-size: 28px;
+    font-weight: 500;
+    border-radius: 20px;
+
+    border: 2px solid grey;
+    box-shadow: 0 0 16px 0 rgb(0,0, 0, 0.6);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.option:hover{
+    background-color: blue !important;
+}
+
+.option:active{
+    background-color: blue !important;
+    color: blue !important;
+}
+
+.td-content{
+    white-space: nowrap;
+}
+
+
+
