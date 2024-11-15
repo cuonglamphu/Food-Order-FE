@@ -15,58 +15,50 @@
     bottom: 0;
     z-index: -1;
 }
-.social-icon {
-    width: 32px; /* hoặc kích thước phù hợp với thiết kế của bạn */
-    height: 32px;
-    background-image: url('../../images/1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
+/* Structure of Footer elements */
 .footer-content {
     position: relative;
     z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
     padding: 0 20px;
-
+    flex-wrap: wrap;
 }
 
+/* Logo styling */
 .pixel-logo {
     font-family: 'Press Start 2P', cursive;
     color: rgba(255, 255, 255, 0.9);
     font-size: 18px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
 }
 
+/* Social Icons styling */
 .pixel-social {
     display: flex;
     gap: 20px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
 }
 
 .pixel-icon {
     width: 32px;
     height: 32px;
-    background-image: url('../../images/1.png');
-    background-size: contain;
-    /* background-color: rgba(255, 255, 255, 0.1); */
-    backdrop-filter: blur(4px);
+    background-image: url('../../images/1.png'); /* Ensure the correct path */
+    background-size: cover; /* Changed to 'cover' for better fit */
+    background-position: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
+    border-radius: 5px; /* Rounded corners for a softer look */
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.pixel-icon:before {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .pixel-icon:hover {
@@ -74,12 +66,36 @@
     transform: translateY(-2px);
 }
 
+/* Copyright styling */
 .pixel-copyright {
     font-family: 'Press Start 2P', cursive;
     color: rgba(255, 255, 255, 0.9);
     font-size: 12px;
     text-align: center;
-    margin-top: 20px;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
+/* Responsive Design */
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pixel-logo {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .pixel-social {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .pixel-copyright {
+        text-align: center;
+        margin-left: 0;
+    }
+}

@@ -1,63 +1,52 @@
-import React, {useState, useEffect}  from 'react'
-import {Form} from 'react-bootstrap'
-import MealTypeService from '../../services/MealService';
+import React, { useEffect } from 'react';
 
 const EditMealTypeComponent = (props) => {
-    const mealType = props.mealType; // u props se nalazi i user i metoda handle submit
-    const selectedFile = props.file;
-  // const {user} = props !!!!
-  // className = 'form-control', bootstrapov input forme, da lepse izgleda
+    const { mealType, file } = props; // Receiving props for mealType and file
 
-  const onChoseFile = (e) =>{
-    console.log(e.target.files[0]);
-    selectedFile.setSelectedFile(e.target.files[0]);
-  }
+    const onChoseFile = (e) => {
+        file.setSelectedFile(e.target.files[0]); // Set selected file in parent state
+        console.log("Selected file:", e.target.files[0]);
+    };
 
-  return (
-    <div> 
-        <div className='container-add-meal'>
-                <form>
-                  <div className='form-group mb-2'>
-                    <label className='form-label'>TypeName: </label>
-                    <input  
+    return (
+        <div className="container-add-meal">
+            <form>
+                <div className="form-group mb-2">
+                    <label className="form-label">Type Name: </label>
+                    <input
                         type="text"
-                        placeholder="Insert name" 
-                        name = "typeName" 
-                        className="form-control"                       
+                        placeholder="Insert name"
+                        name="typeName"
+                        className="form-control"
                         value={mealType.typeName}
-                        onChange = {(e) => mealType.setTypeName(e.target.value)}                    
-                        >                   
-                    </input>
-                  </div>
+                        onChange={(e) => mealType.setTypeName(e.target.value)}
+                    />
+                </div>
 
-                  <div className='form-group mb-2'>
-                    <label className='form-label'>Description: </label>
-                    <input  
+                <div className="form-group mb-2">
+                    <label className="form-label">Description: </label>
+                    <input
                         type="text"
-                        placeholder="Insert description" 
-                        name = "description" 
-                        className="form-control"                        
+                        placeholder="Insert description"
+                        name="description"
+                        className="form-control"
                         value={mealType.description}
-                        onChange = {(e) => mealType.setDescription(e.target.value)}                      
-                        >                        
-                    </input>
-                  </div>
-             
-                  <div className='form-group mb-2'>
-                    <label className='form-label'>Upload image </label>
-                    <input  
-                        type="file"
-                        placeholder="Insert price" 
-                        name = "image" 
-                        className="form-control"                       
-                        onChange = {(e) =>onChoseFile(e)}                      
-                        >                        
-                    </input>
-                  </div>
-                </form>           
-            </div>     
-    </div>
-  )
-}
+                        onChange={(e) => mealType.setDescription(e.target.value)}
+                    />
+                </div>
 
-export default EditMealTypeComponent
+                <div className="form-group mb-2">
+                    <label className="form-label">Upload Image</label>
+                    <input
+                        type="file"
+                        name="image"
+                        className="form-control"
+                        onChange={onChoseFile}
+                    />
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default EditMealTypeComponent;

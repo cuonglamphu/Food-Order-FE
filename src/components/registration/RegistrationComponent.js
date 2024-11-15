@@ -101,7 +101,7 @@ const RegistrationComponent = () => {
                         type="text"
                         placeholder="Insert first name" 
                         name = "firstName" 
-                        className="form-control" 
+                        className="form-control regis-input" 
                         value={firstName}
                         onChange = {(e) => setFirstName(e.target.value)}
                         >    
@@ -114,7 +114,7 @@ const RegistrationComponent = () => {
                         type="text"
                         placeholder="Insert last name" 
                         name = "lastName" 
-                        className="form-control" 
+                        className="form-control regis-input" 
                         value={lastName}
                         onChange = {(e) => setLastName(e.target.value)}
                         >                      
@@ -127,7 +127,7 @@ const RegistrationComponent = () => {
                         type="text"
                         placeholder="Insert email" 
                         name = "email" 
-                        className="form-control" 
+                        className="form-control regis-input" 
                         value={email}
                         onChange = {(e) => setEmail(e.target.value)}
                         >                        
@@ -140,7 +140,7 @@ const RegistrationComponent = () => {
                         type="text"
                         placeholder="Insert phone number" 
                         name = "phoneNumber" 
-                        className="form-control" 
+                        className="form-control regis-input" 
                         value={phoneNumber}
                         onChange = {(e) => setPhoneNumber(e.target.value)}
                         >                       
@@ -154,7 +154,7 @@ const RegistrationComponent = () => {
                       type="text"
                       placeholder="Insert username" 
                       name = "username" 
-                      className="form-control" 
+                      className="form-control regis-input" 
                       value={username}
                       onChange = {(e) => setUsername(e.target.value)}
                       >
@@ -168,7 +168,7 @@ const RegistrationComponent = () => {
                         type="password"
                         placeholder="Insert password" 
                         name = "password" 
-                        className="form-control" 
+                        className="form-control regis-input" 
                         value={password}
                         onChange = {(e) => setPassword(e.target.value)}
                         >                      
@@ -181,14 +181,17 @@ const RegistrationComponent = () => {
                         type="text"
                         placeholder="Insert address" 
                         name = "address" 
-                        className="form-control" 
+                        className="form-control regis-input" 
                         value={address}
                         onChange = {(e) => setAddress(e.target.value)}
                         >                    
                     </input>
                   </div>
-                  <button id='registrationBtn' className='btn btn-success mt-2' onClick={(e) => createUser(e)}>Submit</button>
-                  <Link to="/employees" className='btn btn-danger mt-2' style={{marginLeft:"5px"}}>Cancel</Link>
+                  <button id='registrationBtn' className='btn btn-success mt-3' onClick={(e) => createUser(e)}>Submit</button>
+                  <div className='registration-div' style={{marginTop: "10px"}}>
+                    <div className='registration-label'>Already have an account?&nbsp;</div>
+                    <Link className='registration-link' to='/login'>Sign in</Link>
+                  </div>
                 </form>
               </div>
         </div>    

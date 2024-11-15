@@ -7,6 +7,7 @@ class LoginService{
     }
 
     logout(){
+        sessionStorage.clear();
         TokenService.setTokenInHeader();
         return axios.get("http://localhost:8080/api/logout");
     }

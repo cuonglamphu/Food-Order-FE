@@ -23,6 +23,9 @@ import ListUserComponent from "./components/user/ListUserComponent";
 import jwtDecode from "jwt-decode";
 import { Navigate } from "react-router-dom";
 import NavbarComponent from "./components/navbar/NavbarComponent";
+import FoodDetail from "./components/detail/FoodDetail";
+import ListDiscountComponent from "./components/discount/ListDiscountComponent";
+
 //od V6, nema SWITCH, vec je zamenjeno sa ROUTES, component sa element i nije vise {ListUserComponent} vec {<ListUserComponent/>}
 const PrivateRoute = ({ element, allowedRoles }) => {
     const userRole = localStorage.getItem("role");
@@ -194,6 +197,19 @@ function App() {
                                 />
                             }
                         />
+
+                        <Route
+                            path="/discounts"
+                            element={
+                                <PrivateRoute
+                                    element={<ListDiscountComponent />}
+                                    allowedRoles={["ADMIN"]}
+                                />
+                            }
+                        />
+
+                        <Route path="/meal/:mealId" element={<FoodDetail />} />
+
                     </Routes>
                 </div>
                 <FooterComponent />

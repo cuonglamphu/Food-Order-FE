@@ -7,6 +7,11 @@ const FooterComponent = () => {
             <div className="footer-content">
                 <div className="pixel-logo">FOOD ORDER</div>
 
+
+                <div className="pixel-copyright">
+                    © 2024 CUONGDAY.COM <br /> ALL RIGHTS RESERVED
+                </div>
+
                 <div className="pixel-social">
                     <a
                         href="https://www.facebook.com/phucuong25.0/"
@@ -27,10 +32,7 @@ const FooterComponent = () => {
                         rel="noopener noreferrer"
                     ></a>
                 </div>
-            </div>
-
-            <div className="pixel-copyright">
-                © 2024 CUONGDAY.COM. ALL RIGHTS RESERVED
+                
             </div>
         </footer>
     );

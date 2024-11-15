@@ -139,6 +139,78 @@
     display: flex;
     align-items: center;
 }
+.cart-total, .discount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    background-color: wheat;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.summary {
+    width: 80%;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.voucher-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.voucher-input {
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    max-width: 300px;
+    border-radius: 8px 0 0 8px;
+    border: 2px solid #4CAF50;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.voucher-input:focus {
+    border-color: #45a049;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.3);
+}
+
+.voucher-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.voucher-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.voucher-button:active {
+    transform: scale(0.95);
+}
+
+
+.voucher-button:hover {
+    background-color: #45a049;
+}
 
 .item-action-container{
     display: flex;
@@ -173,7 +245,7 @@
     text-decoration: none;
     color: rgb(245, 245, 245);
     border: none;
-    font-size: 16px !important;
+    font-size: 18px !important;
 }
 
 .btn-action.update{

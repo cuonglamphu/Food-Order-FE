@@ -4,10 +4,8 @@ import './MealQuantityComponent.css';
 
 
 const MealQuantityComponent = (props) => {
-  const mealQuantity = props.mealQuantity; // u props se nalazi i user i metoda handle submit
+  const mealQuantity = props.mealQuantity; 
   const meal = props.meal;
-  // const {user} = props !!!!
-  // className = 'form-control', bootstrapov input forme, da lepse izgleda
   
   return (
         <div className='main-quantity-container'>

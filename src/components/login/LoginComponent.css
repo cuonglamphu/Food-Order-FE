@@ -5,7 +5,7 @@
     /*margin-left: 190px; */
     /* text-align: center; */ 
     background-color: white;
-    width: 400px;
+    width: 500px;
     padding: 30px;
     border-radius: 30px;
     border: 2px solid #dee2e6;
@@ -35,9 +35,9 @@
 }
 
 .login-submit-btn{
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: #198754;
     border: none;
     color: whitesmoke;
@@ -64,6 +64,7 @@
 .login-input{
     border-radius: 10px !important;
     box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.3);
+    height: 40px !important;
 }
 
 .title-login{

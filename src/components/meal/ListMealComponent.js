@@ -80,24 +80,39 @@ const ListMealComponent = () => {
     };
 
     const handleSubmitEdit = () => {
-        if(meal.name.trim() === "" || isNaN(parseInt(meal.price)) || parseInt(meal.price) < 0){
+        if (meal.name.trim() === "" || isNaN(parseInt(meal.price)) || parseInt(meal.price) < 0) {
             alert("Invalid input");
+            return;
         }
-        MealService.updateMeal(meal).then((response) =>{
-            const responseFromServer = response.data;
-            if(responseFromServer === "success"){
-                alert("Uspesno editovano");
-                handleCloseEdit();
-                getAllMeals();  
-            }
-            else if(responseFromServer === "invalid"){
-                alert("Invalid input");
-            }
-            else if(responseFromServer === "fail"){
-                alert("Failed to edit meal");
-            }
-        }) 
-    }
+    
+        // Tạo FormData và thêm dữ liệu vào
+        const fd = new FormData();
+        fd.append('meal', JSON.stringify(meal));
+    
+        // Thêm file hình ảnh nếu có
+        if (selectedFile) {
+            fd.append('image', selectedFile);
+        }
+    
+        MealService.updateMeal(fd)
+            .then((response) => {
+                const responseFromServer = response.data;
+                if (responseFromServer === "success") {
+                    alert("Successfully updated meal!");
+                    handleCloseEdit();
+                    getAllMeals(); // Refresh lại danh sách
+                } else if (responseFromServer === "invalid") {
+                    alert("Invalid input");
+                } else if (responseFromServer === "fail") {
+                    alert("Failed to update meal");
+                }
+            })
+            .catch((error) => {
+                console.error("Error updating meal:", error);
+                alert("An error occurred while updating the meal.");
+            });
+    };
+    
 
     const handleSubmit = () => {
         if(meal.name.trim() === "" || meal.description.trim() === "" || isNaN(parseInt(meal.price)) || parseInt(meal.price) < 0){
@@ -110,7 +125,6 @@ const ListMealComponent = () => {
                 console.log("Selected fileeee" + selectedFile);
             }
             else{
-                //mora img da ima, jer nece na back-u da se nastavi zahtev je ne sadrzi sliku. Morao bih verovatno drugi api endpoint da gadjam kad nema sliku
                 fd.append('image', selectedFile);
                 fd.append('meal', JSON.stringify(meal));
             }
@@ -180,13 +194,12 @@ const ListMealComponent = () => {
                         <th className='theadth'>Action</th>
                     </tr>
                 </thead>
-                {/*mora src={"data:image/png;base64," + meal.image}, ne moze samo src={meal.image}  */}
                 <tbody>
                     {meals.map(
                         meal => <tr key={meal.id}>
                             <td className='td-content'>{meal.id}</td>
                             <td className='td-content-pic'>
-                              <img className='mealPic' src={"data:image/png;base64," + meal.image} alt=''/> 
+                              <img className='mealPic' src={`http://localhost:8080${meal.image}`} alt=''/> 
                             </td>  
                             <td className='td-content'>{meal.name}</td>
                             <td className='td-content'>{meal.mealType.typeName}</td>

@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.regis-input {
+    height: 40px !important;
+}
+
 .card-registration{
     width: 500px;
     background-color: white;
@@ -14,7 +18,10 @@
 }
 
 #registrationBtn{
+    display: block;
     font-size: 18px !important;
+    margin: 0 auto;
+    padding: auto 15px;
 }
 
 .title-registration{

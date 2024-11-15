@@ -28,7 +28,10 @@ const submitLogin = (e) =>{
             alertSuccess("Successfully signed in!");
             localStorage.token = response.data.token;
             const decodedToken = jwt_decode(response.data.token);
-            localStorage.role = decodedToken.role; //stavlja se role u localstorage nakon sto se dekodira pomocu jwt-decode  
+            localStorage.role = decodedToken.role; 
+            sessionStorage.setItem('userId', decodedToken.sub); 
+            sessionStorage.setItem('username', decodedToken.lastName +" " + decodedToken.firstName)
+            console.log(sessionStorage.getItem('username'))
             setTimeout(() => navigateDependingOnRole(localStorage.role), 1500);
         }
         else if(responseFromServer === "fail"){

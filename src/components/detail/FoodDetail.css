@@ -1,0 +1,94 @@
+.product-detail-container {
+    max-width: 110vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px; /* Adds space between product details and comments */
+}
+
+.product-image {
+    width: 300px; /* Đảm bảo khung chứa hình ảnh có kích thước đầy đủ */
+    height: 300px; /* Đặt chiều cao cố định cho khung chứa hình ảnh */
+    overflow: hidden; /* Ẩn phần hình ảnh vượt quá khung */
+    border-radius: 8px; /* Bo tròn các góc của khung chứa hình ảnh */
+    display: flex;
+    justify-content: center; /* Căn giữa hình ảnh trong khung */
+    align-items: center; /* Căn giữa hình ảnh theo chiều dọc */
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%; /* Đảm bảo hình ảnh phủ toàn bộ khung */
+    object-fit: cover; /* Cắt (crop) hình ảnh để vừa khung mà không làm biến dạng */
+    border-radius: 8px; /* Bo tròn các góc của hình ảnh */
+}
+
+
+.product-info {
+    margin-left: 10%;
+    flex: 1;
+}
+
+.product-category {
+    color: #b95e1d;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-actions label {
+    font-size: 16px;
+}
+
+.product-actions input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #198754;
+}

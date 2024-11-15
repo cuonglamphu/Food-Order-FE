@@ -24,7 +24,7 @@ const ItemsByFinalOrderIdComponent = (props) => {
                     {orderItems.map(
                         orderItem => <tr key={orderItem.mealId}>
                             <td className='td-content-img'>
-                              <img className='mealPicModal' src={"data:image/png;base64," + orderItem.mealImage} alt=''/> 
+                              <img className='mealPicModal'  src={`http://localhost:8080/uploads/meal/${orderItem.mealName.toLowerCase().replace(/\s+/g, '_')}.jpg`} alt=''/> 
                             </td>
                             <td>{orderItem.mealName}</td>
                             <td>{orderItem.mealTypeName}</td>

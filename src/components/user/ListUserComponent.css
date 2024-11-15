@@ -1,24 +1,72 @@
-.theadth{
-    /* justify-content: center; */
-    /* align-items: center; */
+/* Kiểu dáng chung cho bảng */
+.tableElement {
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border-radius: 30px !important;
+    border: 3px solid;
+    border-collapse: separate !important;
+    box-shadow: 0 0 15px 15px rgb(133, 127, 127);
+    overflow-x: auto; /* Cho phép cuộn ngang trên màn hình nhỏ */
+}
+
+/* Căn giữa nội dung tiêu đề và ô */
+.theadth,
+.td-content {
     text-align: center;
     font-size: larger;
+    padding: 10px;
 }
 
-.td-content{
-    /* text-align: center; */
-    align-items: center;
-    font-size: larger;
+/* Làm cho bảng responsive */
+@media (max-width: 768px) {
+    /* Điều chỉnh kích thước font và khoảng cách cho màn hình nhỏ hơn */
+    .theadth, .td-content {
+        font-size: medium;
+        padding: 8px;
+    }
+
+    /* Ẩn một số cột trên màn hình nhỏ */
+    .tableElement thead th:nth-child(4),
+    .tableElement tbody td:nth-child(4),
+    .tableElement thead th:nth-child(5),
+    .tableElement tbody td:nth-child(5),
+    .tableElement thead th:nth-child(6),
+    .tableElement tbody td:nth-child(6) {
+        display: none;
+    }
 }
 
-.tableElement{
-    margin-top: 20px;
-    background-color: whitesmoke; 
-    border-radius: 30px !important;
-    border: 3px solid; 
-    border-collapse: separate !important; /*mora ovo separate zbog bootstrapa, ne savije border, jer bootstrap setuje na collapse
-    /* border: 10px solid rgb(241, 0, 0) !important da pregazi bootstrapov border */
-    box-shadow: 0 0 15px 15px rgb(133, 127, 127);
+/* Điều chỉnh thêm cho màn hình rất nhỏ */
+@media (max-width: 576px) {
+    .theadth, .td-content {
+        font-size: small;
+        padding: 5px;
+    }
+
+    /* Xếp chồng các hàng của bảng theo chiều dọc trên màn hình rất nhỏ */
+    .tableElement thead {
+        display: none;
+    }
+
+    .tableElement tbody tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .tableElement tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        display: inline-block;
+        width: 100px;
+        color: #333;
+    }
+
+    .td-content {
+        text-align: left;
+    }
 }
-    
-   
+

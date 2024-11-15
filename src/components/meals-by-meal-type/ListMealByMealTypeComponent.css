@@ -28,8 +28,11 @@
     max-width: 300px;
 }
 
-
-
+.meal-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
 
 
 

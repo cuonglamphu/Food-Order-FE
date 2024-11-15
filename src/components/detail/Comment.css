@@ -1,0 +1,107 @@
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.comments-section h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.comments-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comments-section textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.comments-section textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+.comments-section button {
+    align-self: flex-end;  /* Căn chỉnh nút submit sang phải */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.comments-section button:hover {
+    background-color: #0056b3;
+}
+
+.comments-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comments-list li {
+    display: flex;  /* Sử dụng flexbox để căn chỉnh các phần tử con theo hàng ngang */
+    justify-content: space-between;  /* Đẩy phần nội dung bình luận sang trái và nút xóa sang phải */
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 4px solid #007bff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    align-items: center;  /* Căn giữa các phần tử con theo chiều dọc */
+}
+.comments-list li strong {
+    color: #007bff;
+    font-size: 16px;
+}
+
+.comments-list li em {
+    font-size: 14px;
+    color: #777;
+}
+
+.comments-list li p {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Comment.css */
+.delete-comment-btn {
+    background-color: #e11d48 !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-comment-btn:hover {
+    background-color: #9b1c31 !important;
+}
+
+.delete-comment-btn:focus {
+    outline: none;
+}

@@ -76,6 +76,11 @@ class MealService{
         return axios.delete("http://localhost:8080/api/finalOrder/deleteFinalOrder/" + finalOrderId);
     }
 
+    // Add to detail 
+    getMealById(mealId) {
+        TokenService.setTokenInHeader(); 
+        return axios.get(`http://localhost:8080/api/meal/getMealById/${mealId}`);
+    }
 }
 
 export default new MealService();
